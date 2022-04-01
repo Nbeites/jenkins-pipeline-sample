@@ -1,0 +1,4 @@
+jenkins creds:
+
+name: bago
+pass: A21...ail!
