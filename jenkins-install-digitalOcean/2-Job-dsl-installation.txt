@@ -1,6 +1,6 @@
 In previsouly installed jenkins inside docker container in host machine:
 
-	-Go to Jenkins and click new item
+	-Go to Jenkins and click new item (can call it seed project)
 		- Source Code git url : https://github.com/wardviaene/jenkins-course
 		OR
 		- https://github.com/Nbeites/jenkins-pipeline-sample
@@ -15,6 +15,16 @@ In previsouly installed jenkins inside docker container in host machine:
 			- In manage jenkins -> Process script approval, approve the previous groovy script so it can be trusted and executed
 
 			- New credentials in credencial manager with docker hub credentials and ID = Description = dockerhub 
+			(In groovy script, the reference to credentials is dockerhub, so IDs must match)
 
 			- Build Now will create a project called NodeJS Docker example (as told in groovy script - job('NodeJS Docker example')),
 			 then build that project
+
+Put the application Running
+
+	Download and Run container in repository in host machine:
+
+		docker pull nbeites/nodejs-demo-example:latest
+		docker run -p 3000:3000 -d --name my-nodejs-app nbeites/nodejs-demo-example
+
+		And the app should be running on http://138.68.187.254:8080 - host machine IP : 3000 -> chosen port to expose node js app
