@@ -1,4 +1,7 @@
+
+pass key shh : pass: A21...ail!
+
 jenkins creds:
 
-name: bago
+name: nbeites
 pass: A21...ail!

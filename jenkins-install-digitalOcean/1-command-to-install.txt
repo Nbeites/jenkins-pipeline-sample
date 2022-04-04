@@ -42,3 +42,21 @@ To Install jenkins-docker in remote machine inside a docker container:
 					- sudo usermod -a -G docker jenkins (to add jenkins to docker group) (supposedly is already inside dockerfile)
 
 
+
+					--------------
+
+					Configure Pipeline : 
+
+						- Repository URL to project Repository
+						- Docker Build:
+							- Create a empty Repository in docker hub and put it in docker build repository name
+							- add creds: docker hub creds
+					
+					Download and Run container in repository in host machine:
+
+					docker pull nbeites/nodejs-demo-example:latest
+					docker run -p 3000:3000 -d --name my-nodejs-app nbeites/nodejs-demo-example
+
+
+
+

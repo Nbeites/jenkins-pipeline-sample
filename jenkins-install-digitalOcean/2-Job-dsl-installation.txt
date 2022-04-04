@@ -1,0 +1,16 @@
+In previsouly installed jenkins inside docker container in host machine:
+
+	-Go to Jenkins and click new item
+		- Source Code git url : https://github.com/wardviaene/jenkins-course
+
+		- Add Build Step: - Process Job DSL
+			-DSL Script path: 
+			
+			 job-dsl/nodejsdocker.groovy
+
+			- In manage jenkins -> Process script approval, approve the previous groovy script so it can be trusted and executed
+
+			- New credentials in credencial manager with docker hub credentials and ID = Description = dockerhub 
+
+			- Build Now will create a project called NodeJS Docker example (as told in groovy script - job('NodeJS Docker example')),
+			 then build that project
