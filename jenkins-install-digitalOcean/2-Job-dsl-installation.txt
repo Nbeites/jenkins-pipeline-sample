@@ -2,11 +2,15 @@ In previsouly installed jenkins inside docker container in host machine:
 
 	-Go to Jenkins and click new item
 		- Source Code git url : https://github.com/wardviaene/jenkins-course
+		OR
+		- https://github.com/Nbeites/jenkins-pipeline-sample
 
 		- Add Build Step: - Process Job DSL
 			-DSL Script path: 
 			
 			 job-dsl/nodejsdocker.groovy
+			 OR
+			 job-DSL/nodejsdocker.groovy (In case of Nbeites repo)
 
 			- In manage jenkins -> Process script approval, approve the previous groovy script so it can be trusted and executed
 
