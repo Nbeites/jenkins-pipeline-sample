@@ -16,10 +16,10 @@ To stop and remove current jenkins container:
 		- /var/jenkins_home (jenkins is still in the disk as a volume, just not as a container running)
 
 
-To Install and run jenkins-docker in remote machine inside a docker container:
+To Install jenkins-docker in remote machine inside a docker container:
 
 	- git clone https://github.com/wardviaene/jenkins-docker (this directory is present in nbeites repo (AND CORRECTED))
-	- docker build -t jenkins-docker . (inside jenkins-docker file)
+	- docker build -t jenkins-docker .
 	- docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker
 	- docker exec -it jenkins bash (-it is to open a terminal)
 
