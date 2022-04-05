@@ -1,0 +1,11 @@
+Jenkins Integrations: (All the integrations are inside jenkins-course directory)
+
+    -E-mail notification : For tests, mailtrap.io can be used
+        - Extended  email notification with SMTP authentication, that can be obtained with mailtrap.io
+
+    -Slack Notification
+
+    -Github and Bitbucket Integration
+
+
+    - Sonarcube integration

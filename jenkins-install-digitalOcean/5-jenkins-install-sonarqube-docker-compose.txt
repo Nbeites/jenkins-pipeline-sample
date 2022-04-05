@@ -1,0 +1,2 @@
+Install Jenkins + Sonarqube + PostgreSQL (for Sonarqube) in host machine:
+
