@@ -1,2 +1,28 @@
 Install Jenkins + Sonarqube + PostgreSQL (for Sonarqube) in host machine:
 
+download this file in host machine: jenkins-pipeline-sample/docker-compose/docker-compose.yml
+
+run in cmd: docker-compose up -d (-d is for detach, so that compose runs and we continue to have shell in host machine open)
+
+
+If this error occurs : max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144].
+
+    execute:
+
+        $ sudo sysctl -w vm.max_map_count=262144
+        ========================================
+        Output:
+
+        $ sudo sysctl -w vm.max_map_count=262144
+        vm.max_map_count = 262144
+        To set value permanently, update the vm.max_map_count value in /etc/sysctl.conf. To verify after rebooting,
+
+        $ sysctl vm.max_map_count
+
+To see Sonarqube logs:
+
+    - docker-compose logs -f sonarqube
+
+
+If it gives database error or other error, prune completely the docker from old images, volumes , containers, etc,
+and try again
