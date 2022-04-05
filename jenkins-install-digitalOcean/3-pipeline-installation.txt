@@ -1,0 +1,21 @@
+In previsouly installed jenkins inside docker container in host machine:
+
+	-Install Docker Pipeline plugin
+	-Go to Jenkins and click new item
+		- Pipeline
+
+
+	- In project configuration insert respository URL (git) : https://github.com/Nbeites/nodejs-demo.git
+	- Main branch specifier */main
+	- Script path : misc/Jenkinsfile
+
+	- Build New
+
+Put the application Running
+
+	Download and Run container in repository in host machine:
+
+		docker pull nbeites/nodejs-demo-example:latest
+		docker run -p 3000:3000 -d --name my-nodejs-app nbeites/nodejs-demo-example
+
+		And the app should be running on http://138.68.187.254:8080 - host machine IP : 3000 -> chosen port to expose node js app
