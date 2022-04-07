@@ -1,3 +1,4 @@
+
 Install Jenkins + Sonarqube + PostgreSQL (for Sonarqube) in host machine:
 
 download this file in host machine: jenkins-pipeline-sample/docker-compose/docker-compose.yml
@@ -37,3 +38,13 @@ docker container prune
 docker volume prune
 docker image prune
 docker network prune
+
+
+(From now on, with this method of installation complete, builds stopped working
+with error: docker not installed, there is something to do with previous docker group
+configuration, maybe got wiped at docker system prune or something similar)
+
+(This method works, but it needs to be adapted to run builds
+From now on, a sample springboot application with maven will be deployed,
+this is extra course, just to do a full example with spring boot)
+

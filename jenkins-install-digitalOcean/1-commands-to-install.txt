@@ -1,6 +1,8 @@
 wget https://github.com/wardviaene/jenkins-course/blob/master/scripts/install_jenkins.sh
 	(or put the file via SFTP with filezilla and run it afterwards)
 
+	OR wget https://raw.githubusercontent.com/Nbeites/jenkins-pipeline-sample/main/jenkins-install-digitalOcean/install_jenkins.sh
+
 bash install_jenkins.sh
 
 After Install:
@@ -19,6 +21,9 @@ To stop and remove current jenkins container:
 To Install jenkins-docker in remote machine inside a docker container:
 
 	- git clone https://github.com/wardviaene/jenkins-docker (this directory is present in nbeites repo (AND CORRECTED))
+	
+	(OR wget https://raw.githubusercontent.com/Nbeites/jenkins-pipeline-sample/main/jenkins-docker-master/Dockerfile)
+	
 	- docker build -t jenkins-docker .
 	- docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -d jenkins-docker
 	- docker exec -it jenkins bash (-it is to open a terminal)
@@ -33,7 +38,7 @@ To Install jenkins-docker in remote machine inside a docker container:
 		EXAMPLE : host machine -> docker:x:998:root ; container -> docker:x:998:jenkins (THIS WORKS), just run the DockerFile that is 
 		in this project in jenkins-docker
 
-		If does not work, try executing the follpwing command outside container : sudo systemctl restart docker
+		If does not work, try executing the following command outside container : sudo systemctl restart docker
 		And try again...
 
 		If not resolves, then see what comes out of this command :
